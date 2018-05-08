@@ -27,6 +27,7 @@
 // =----------------------------------------------------------=
 
 #include <stdio.h>
+#include <string.h>
 #include "mem.h"
 
 // Parâmetros:
@@ -36,9 +37,11 @@
 // Essa função deve retornar 1, se `a` é menor que `b` (`a` deve vir antes de `b` no
 // arquivo), e 0 caso contrário.
 // Ela também é usada para verificação da ordenação! Então, se você implementá-la
-// erroneamente, a verificação também estará errada! 
+// erroneamente, a verificação também estará errada!
 int a_menor_que_b(char* a, char* b, int len) {
-    return 1;
+    if(strcmp(a, b) < 0)
+      return 1;
+    else return 0;
 }
 
 // Parâmetros:
@@ -49,4 +52,7 @@ int a_menor_que_b(char* a, char* b, int len) {
 // escrevê-los em `output_file`, usando memória menor ou igual a `memory`. Lembre-se
 // de fechar todos os arquivos que você usar por aqui!!
 void external_sort(const char* input_file, const char* output_file, unsigned int memory) {
+  char *sortArray = mathias_malloc(memory);
+  if(sortArray)
+    printf("a");
 }
